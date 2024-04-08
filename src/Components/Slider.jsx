@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 const Slider = () => {
     return (
-        <div className='grid grid-cols-1 gap-2  lg:grid-cols-2 my-4 md:my-8 '>
+        <div className='grid grid-cols-1 gap-2  lg:grid-cols-2 my-4 md:my-10 '>
              <div className='col-span-1'>
                     <h1 className='md:mt-16 md:text-4xl font-bold text-orange-600 text-2xl text-center'>The better way to buy <br />Real Estate</h1>
                     <p className='text-center my-4 text-sm md:text-xl'>
