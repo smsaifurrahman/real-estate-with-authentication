@@ -8,6 +8,7 @@ import {
 import Root from "../Root/Root";
 import Home from "../Pages/Home";
 import Update from "../Pages/Update";
+import EstateDetails from "../Components/EstateDetails";
 
   const router = createBrowserRouter([
     {
@@ -16,11 +17,17 @@ import Update from "../Pages/Update";
       children: [
         {
             path: '/',
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: () => fetch('/estates.json')
         },
         {
             path: '/update',
             element: <Update></Update>
+        },
+        {
+          path: '/estate-details/:id',
+          element: <EstateDetails></EstateDetails>,
+          loader: () => fetch('/estates.json')
         }
       ]
     },
