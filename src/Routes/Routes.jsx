@@ -12,11 +12,13 @@ import EstateDetails from "../Components/EstateDetails";
 import Register from "../Pages/Register";
 import Login from "../Pages/Login";
 import ProtectedRoute from "../ProtectedRoutes/ProtectedRoute";
+import ErrorPage from "../Pages/ErrorPage";
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',
@@ -25,7 +27,7 @@ import ProtectedRoute from "../ProtectedRoutes/ProtectedRoute";
         },
         {
             path: '/update',
-            element: <Update></Update>
+            element: <ProtectedRoute><Update></Update></ProtectedRoute>
         },
         {
           path: '/estate-details/:id',

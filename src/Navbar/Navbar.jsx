@@ -45,22 +45,20 @@ const Navbar = () => {
   <div className="navbar-end">
     {
       user ? 
-      <div className="dropdown ">
-      <div tabIndex={0} role="button" className="btn  btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img className="hover:" title={user?.displayName} alt="Tailwind CSS Navbar component" src={user.photoURL} />
-        </div>
-
-
-
-      </div>
-            <ul tabIndex={0} className="menu dropdown-content   -mt-2 -ml-8 shadow  rounded-box w-22">
+ 
+        <div className="flex items-center">
+              <div tabIndex={0} role="button" className="btn  btn-circle avatar">
+          <div className="w-10 rounded-full">
+            <img className="hover:" title={user?.displayName} alt="Tailwind CSS Navbar component" src={user.photoURL} />
+           
+          </div>
         
-              
-            <li onClick={handleLogOut} className="font-bold"> <NavLink>Logout</NavLink> </li>
-            </ul>
+        
+      </div>
+      <button onClick={handleLogOut}  className="btn">Logout</button>
         </div>
         :  <NavLink to={'/login'}><button className="btn">Login</button></NavLink>
+        
           }
         
 

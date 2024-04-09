@@ -7,6 +7,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import { FaEye,FaEyeSlash  } from "react-icons/fa";
+import { Helmet } from 'react-helmet-async';
+
 
 
 
@@ -16,6 +19,8 @@ const Login = () => {
 
     const navigate = useNavigate();
     const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false)
+
 
     const {
         register,
@@ -52,6 +57,7 @@ const Login = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200">
+          <Helmet><title>EliteDwelling | Login</title></Helmet>
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
@@ -66,6 +72,7 @@ const Login = () => {
                 </label>
                 <input 
                 type="email"
+                
                 placeholder="email"
                 {...register("email", { required: true })}
                  className="input input-bordered"   />
@@ -76,12 +83,15 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input 
-                type="password" 
-                placeholder="password" 
-                {...register("password", { required: true })}
-                className="input input-bordered"
-                  />
+                <div className="relative  "> 
+                 <input 
+                    type={showPassword ? 'text': 'password'} 
+                    placeholder="password" 
+                    {...register("password", { required: true })}
+                    className="input input-bordered w-full"
+                      />
+                      <span className="absolute top-4  right-2" onClick={()=> setShowPassword(!showPassword)} > {showPassword ? <FaEyeSlash />: <FaEye /> } </span>
+                  </div>
                    {errors.password && <span className="text-red-500">This field is required</span>}
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>

@@ -4,6 +4,7 @@ import { FaChartArea } from "react-icons/fa";
 
 import { Link, useLoaderData,useParams } from 'react-router-dom';
 import { CiLocationOn } from "react-icons/ci";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -15,6 +16,7 @@ const EstateDetails = () => {
     console.log(estate);
     return (
         <div className=" md:grid grid-cols-5 gap-4  bg-base-100 shadow-xl mt-8 rounded-xl">
+          <Helmet><title>EliteDwelling | EstateDetails-{estate.id.toString()}</title></Helmet>
             <figure className=' relative  mt-4 col-span-3 rounded-xl border-2 md:h-[460px] h-96 md:w-full object-cover'>
             <img className='h-full w-full rounded-xl object-cover' src={image} alt="Album" />
             <p className="absolute bg-orange-500 px-6 rounded-l-b-xl text-white f left-0 top-0 py-2">{Status}</p>

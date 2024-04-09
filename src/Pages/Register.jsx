@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from "firebase/auth";
 import { FaEye,FaEyeSlash  } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -77,6 +78,7 @@ const Register = () => {
 
     return (
          <div className="hero min-h-screen bg-base-200">
+          <Helmet><title>EliteDwelling | Register</title></Helmet>
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
@@ -129,7 +131,7 @@ const Register = () => {
                     className="input input-bordered w-full"
                       />
                       <span className="absolute top-4  right-2" onClick={()=> setShowPassword(!showPassword)} > {showPassword ? <FaEyeSlash />: <FaEye /> } </span>
-                    </div>
+                  </div>
                       {errors.password && <span className="text-red-500">This field is required</span>}
 
                       {error && <span className="text-red-500">{error}</span>}
