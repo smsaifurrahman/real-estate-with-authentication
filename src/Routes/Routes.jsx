@@ -11,6 +11,7 @@ import Update from "../Pages/Update";
 import EstateDetails from "../Components/EstateDetails";
 import Register from "../Pages/Register";
 import Login from "../Pages/Login";
+import ProtectedRoute from "../ProtectedRoutes/ProtectedRoute";
 
   const router = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ import Login from "../Pages/Login";
         },
         {
           path: '/estate-details/:id',
-          element: <EstateDetails></EstateDetails>,
+          element: <ProtectedRoute> <EstateDetails></EstateDetails> </ProtectedRoute>,
           loader: () => fetch('/estates.json')
         },
         {

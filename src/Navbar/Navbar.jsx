@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import Result from "postcss/lib/result";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Navbar = () => {
@@ -9,12 +12,14 @@ const Navbar = () => {
     const navLink = <>
     
         <li> <NavLink to={'/'}> Home </NavLink> </li>
-        <li className="mx-3"> <NavLink to={'/update'}> Update </NavLink> </li>
+        <li className="lg:mx-3"> <NavLink to={'/update'}> Update </NavLink> </li>
         <li> <NavLink to={'/contact'}> Contact </NavLink> </li>
     </>
   const handleLogOut = () => {
     logOut()
-    .then()
+    .then((result)=> {
+      toast.success('You are Logged out')
+    })
     .catch()
   }
 
@@ -43,8 +48,11 @@ const Navbar = () => {
       <div className="dropdown ">
       <div tabIndex={0} role="button" className="btn  btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img className="hover:" title={user?.displayName} alt="Tailwind CSS Navbar component" src={user.photoURL} />
         </div>
+
+
+
       </div>
             <ul tabIndex={0} className="menu dropdown-content   -mt-2 -ml-8 shadow  rounded-box w-22">
         

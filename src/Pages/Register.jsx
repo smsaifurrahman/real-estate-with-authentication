@@ -4,13 +4,17 @@ import { AuthContext } from "../providers/AuthProvider";
 import { Link, Navigate ,useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { updateProfile } from "firebase/auth";
+import { FaEye,FaEyeSlash  } from "react-icons/fa";
+
 
 
 
 
 const Register = () => {
-    const {createUser,logOut} = useContext(AuthContext);
+    const {createUser,logOut,auth} = useContext(AuthContext);
     const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false)
     // const [registrationSuccess, setRegistrationSuccess] = useState(false);
     const navigate = useNavigate();
     
@@ -46,7 +50,14 @@ const Register = () => {
 
         createUser(data.email, data.password)
         .then(result => {
-            // console.log(result.user);
+            console.log(result.user);
+            updateProfile(result.user, {
+              displayName: data.name,
+              photoURL: data.image
+
+            })
+            .then()
+            .catch()
             
             logOut();
             e.target.reset();
@@ -100,7 +111,7 @@ const Register = () => {
                   <span className="label-text">Photo URL</span>
                 </label>
                 <input 
-                type="photo"
+                type="text"
                 placeholder="Photo URL"
                 {...register("image", { required: true })}
                  className="input input-bordered"   />
@@ -110,16 +121,19 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input 
-                type="password" 
-                placeholder="password" 
-                {...register("password", { required: true })}
-                className="input input-bordered"
-                  />
-                   {errors.password && <span className="text-red-500">This field is required</span>}
+                 <div className="relative  "> 
+                 <input 
+                    type={showPassword ? 'text': 'password'} 
+                    placeholder="password" 
+                    {...register("password", { required: true })}
+                    className="input input-bordered w-full"
+                      />
+                      <span className="absolute top-4  right-2" onClick={()=> setShowPassword(!showPassword)} > {showPassword ? <FaEyeSlash />: <FaEye /> } </span>
+                    </div>
+                      {errors.password && <span className="text-red-500">This field is required</span>}
 
-                   {error && <span className="text-red-500">{error}</span>}
-                
+                      {error && <span className="text-red-500">{error}</span>}
+                    
                 
               </div>
               <div className="form-control mt-6">

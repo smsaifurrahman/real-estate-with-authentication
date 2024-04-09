@@ -9,7 +9,7 @@ const Root = () => {
         <div className='max-w-7xl mx-auto my-6 px-2 md:px-0'>
             <Navbar></Navbar>
             <Outlet></Outlet>
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
         </div>
     );
 };

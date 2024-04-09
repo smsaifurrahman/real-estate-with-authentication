@@ -31,9 +31,9 @@ const Slider = () => {
             navigation
             pagination={{ clickable: false }}
             scrollbar={{ draggable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
+            // onSwiper={(swiper) => console.log(swiper)}
             autoplay={{ delay: 4000 }}
-            onSlideChange={() => console.log('slide change')}
+            // onSlideChange={() => console.log('slide change')}
             >
                 <SwiperSlide><img className='h-full w-full rounded-xl object-cover' src='https://i.ibb.co/JrzqhYx/1000-F-754826732-ETiyz-JOwh-EFe-Xx-M8j-H2s-Zs5a-S5-MLzr2k.jpg' alt="" /></SwiperSlide>
                 <SwiperSlide><img className='h-full w-full object-cover rounded-xl ' src="https://i.ibb.co/Hp3vRdP/house-landscape-pool-relaxation-garden-1203-4900.jpg" alt="" /></SwiperSlide>

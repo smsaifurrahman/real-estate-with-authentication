@@ -2,12 +2,18 @@ import React, { useState } from 'react';
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../providers/AuthProvider";
-import { Link,useNavigate } from "react-router-dom";
+import { Link,useNavigate,useLocation } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
+
+
 
 const Login = () => {
-    const {logIn} = useContext(AuthContext);
+    const {logIn,googleSignIn,githubSignIn,setLoading} = useContext(AuthContext);
+    const location = useLocation()
+
     const navigate = useNavigate();
     const [error, setError] = useState('');
 
@@ -21,15 +27,26 @@ const Login = () => {
       const onSubmit = (data) => {
         logIn(data.email, data.password)
         .then(result => {
-            console.log(result.user);
-            navigate('/');
+          setLoading(false)
+          navigate( location?.state ? location.state : '/');
             toast.success('You have logged in Successfully')
         })
         .catch(error => {
-            console.log(error);
             setError("");
             toast.error('Incorrect Email or Password')
         })
+      }
+      // Social media sign in 
+      const handleSocialSignIn = (socialSignIn) => {
+          socialSignIn()
+          .then(result => {
+            setLoading(false)
+            toast.success('You have successfully signed in.');
+            
+            navigate( location?.state ? location.state : '/');
+
+          })
+          .catch();
       }
 
 
@@ -74,6 +91,16 @@ const Login = () => {
                 <button className="btn btn-primary">Login</button>
               </div>
             </form>
+            {/* Social Login  */}
+            <div className='text-center font-bold'>
+                  <p>You can also Login with </p>
+              <button onClick={()=>handleSocialSignIn(googleSignIn)} className='text-green-600 text-2xl'><FcGoogle  />
+                    </button>
+              <button onClick={()=> handleSocialSignIn(githubSignIn)} className=' ml-4 text-2xl'><FaGithub />
+              </button>    
+                    
+
+            </div>
             {/* {error && <span className="text-red-500">{error}</span>} */}
             <p className="text-center mb-2">New on the Platform ? <Link to={'/register'}><span className="text-green-600 font-bold">Register here</span></Link> </p>
           </div>

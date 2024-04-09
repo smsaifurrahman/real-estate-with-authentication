@@ -2,7 +2,7 @@ import React from 'react';
 
 const Update = () => {
     return (
-        <div>
+        <div className='min-h-screen'>
             update
         </div>
     );
