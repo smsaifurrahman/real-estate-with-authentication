@@ -39,41 +39,45 @@ const Update = () => {
 
 
     return (
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-         
-      <form onSubmit={handleUpdate} className="card-body">
-      <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email</span>
-          </label>
-          <input value={email} type="email" placeholder="email" className="input input-bordered" required />
+        <div className='flex flex-col justify-center items-center my-3'>
+            <h1 className='text-2xl mt-2 font-bold'>Update Your Profile</h1>
+            <img className='w-28 h-28 rounded-full my-3' src={image} alt="" />
+            <div className="card  shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    
+                    <form onSubmit={handleUpdate} className="card-body">
+                    <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">Email</span>
+                        </label>
+                        <input value={email} type="email" placeholder="email" className="input input-bordered" required />
+                      </div>
+                      <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">Name</span>
+                        </label>
+                        <input 
+                        type="text" 
+                        value={name}
+                        onChange={handNameChange}
+                        placeholder="name" className="input input-bordered" required />
+                      </div>
+                      <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">Photo URL</span>
+                        </label>
+                        <input 
+                        type="text"
+                        value={image}
+                        onChange={handImageChange}
+                        placeholder="image url" className="input input-bordered" required />
+                        
+                      </div>
+                      <div className="form-control mt-6">
+                        <button className="btn btn-primary">Update</button>
+                      </div>
+                    </form>
+            </div>
         </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Name</span>
-          </label>
-          <input 
-          type="text" 
-          value={name}
-          onChange={handNameChange}
-          placeholder="name" className="input input-bordered" required />
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Photo URL</span>
-          </label>
-          <input 
-          type="text"
-          value={image}
-          onChange={handImageChange}
-          placeholder="image url" className="input input-bordered" required />
-          
-        </div>
-        <div className="form-control mt-6">
-          <button className="btn btn-primary">Update</button>
-        </div>
-      </form>
-    </div>
     );
 };
 

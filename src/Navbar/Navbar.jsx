@@ -13,7 +13,7 @@ const Navbar = () => {
     
         <li> <NavLink to={'/'}> Home </NavLink> </li>
         <li className="lg:mx-3"> <NavLink to={'/update'}> Update </NavLink> </li>
-        <li> <NavLink to={'/contact'}> Contact </NavLink> </li>
+        <li> <NavLink to={'/contact-us'}> Contact Us </NavLink> </li>
     </>
   const handleLogOut = () => {
     logOut()
@@ -24,7 +24,7 @@ const Navbar = () => {
   }
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

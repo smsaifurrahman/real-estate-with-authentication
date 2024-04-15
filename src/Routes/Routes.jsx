@@ -13,6 +13,7 @@ import Register from "../Pages/Register";
 import Login from "../Pages/Login";
 import ProtectedRoute from "../ProtectedRoutes/ProtectedRoute";
 import ErrorPage from "../Pages/ErrorPage";
+import ContactUs from "../Pages/ContactUs";
 
   const router = createBrowserRouter([
     {
@@ -41,6 +42,11 @@ import ErrorPage from "../Pages/ErrorPage";
         {
           path:'/login',
           element: <Login></Login>
+        },
+        {
+          path: '/contact-us',
+          element: <ProtectedRoute> <ContactUs></ContactUs> </ProtectedRoute>
+
         }
       ]
     },
