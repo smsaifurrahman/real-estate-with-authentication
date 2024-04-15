@@ -19,7 +19,7 @@ const EstateDetails = () => {
           <Helmet><title>EliteDwelling | EstateDetails-{estate.id.toString()}</title></Helmet>
             <figure className=' relative  mt-4 col-span-3 rounded-xl border-2 md:h-[460px] h-96 md:w-full object-cover'>
             <img className='h-full w-full rounded-xl object-cover' src={image} alt="Album" />
-            <p className="absolute bg-orange-500 px-6 rounded-l-b-xl text-white f left-0 top-0 py-2">{Status}</p>
+            <p className="absolute bg-blue-500 px-6 rounded-tl-xl text-white left-0 top-0 py-2">{Status}</p>
             </figure>
             
         <div className="col-span-2 md:mt-0 mt-3 md:ml-0 ml-3">
@@ -70,7 +70,8 @@ const EstateDetails = () => {
             </div>
         
                 <p>{description}</p>
-              <Link to={'/'}> <button className="btn btn-accent  my-1">Back to Properties</button></Link>
+              <Link to={'/'}> <button className="btn bg-orange-500 text-white  my-1">Back to Properties</button></Link>
+              <button className="btn bg-blue-500 text-white ml-4">{Status === 'Sale'? 'Sale Property' : 'Rent Property'}</button>
         </div> 
           
         </div>

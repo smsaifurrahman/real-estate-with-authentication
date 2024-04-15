@@ -11,9 +11,20 @@ const Navbar = () => {
     const {user,logOut } = useContext(AuthContext);
     const navLink = <>
     
-        <li> <NavLink to={'/'}> Home </NavLink> </li>
-        <li className="lg:mx-3"> <NavLink to={'/update'}> Update </NavLink> </li>
-        <li> <NavLink to={'/contact-us'}> Contact Us </NavLink> </li>
+        {/* <li> <NavLink to={'/'}> Home </NavLink> </li>
+        <li className="lg:mx-3"> <NavLink to={'/update'}> Update Profile </NavLink> </li>
+        <li> <NavLink to={'/contact-us'}> Contact Us </NavLink> </li> */}
+        {/* <li> <NavLink to={'/'} className={({isActive}) => isActive ? ' font-bold text-xl text-green-600 p-2 rounded-xl' : 'font-bold p-2 text-xl rounded-xl border-2 border-green-300'}> Home </NavLink> </li>
+        <li className="md:mx-2" > <NavLink to={'/update'} className= {({isActive}) => isActive ? 'text-primary font-bold text-xl bg-green-500 p-2 rounded-xl' : 'font-bold p-2 text-xl rounded-xl border-2 border-green-300'} > Update Profile </NavLink> </li>
+        <li> <NavLink to={'/contact-us'} className={({isActive}) => isActive ? 'text-primary font-bold text-xl bg-green-500 p-2 rounded-xl' : 'font-bold p-2 text-xl rounded-xl border-2 border-green-300'}> Contact Us </NavLink> </li> */}
+        <NavLink to={'/'} className={({isActive}) => isActive ? ' font-bold text-xl text-orange-600 p-2 rounded-xl border-2 border-orange-300' : 'font-bold p-2 text-xl rounded-xl border-2 border-orange-300'}> Home </NavLink>
+        <NavLink to={'/update'} className= {({isActive}) => isActive ? ' font-bold text-orange-600 border-2 border-orange-300 text-xl p-2 rounded-xl md:mx-2' : 'font-bold p-2 text-xl rounded-xl border-2 border-orange-300  md:mx-2'} > Update Profile </NavLink>
+        <NavLink to={'/contact-us'} className={({isActive}) => isActive ? ' font-bold text-orange-600 text-xl border-2 border-orange-300  p-2 rounded-xl' : 'font-bold p-2 text-xl rounded-xl border-2 border-orange-300'}> Contact Us </NavLink>
+
+
+        
+
+    
     </>
   const handleLogOut = () => {
     logOut()
@@ -34,7 +45,7 @@ const Navbar = () => {
                 {navLink}
               </ul>
             </div>
-            <a className="btn btn-ghost text-xl">EliteDwellings</a>
+            <Link to={'/'} className="btn btn-ghost text-2xl text-blue-600 font-bold "> ElitesDwellings</Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
@@ -57,7 +68,7 @@ const Navbar = () => {
       </div>
       <button onClick={handleLogOut}  className="btn">Logout</button>
         </div>
-        :  <NavLink to={'/login'}><button className="btn">Login</button></NavLink>
+        :  <NavLink to={'/login'} className={({isActive}) => isActive ? 'font-bold text-xl text-orange-600 p-2 rounded-xl border-2 border-orange-300' : 'font-bold p-2 text-xl rounded-xl border-2 border-orange-300 ' }><button >Login</button></NavLink>
         
           }
         

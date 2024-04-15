@@ -77,14 +77,11 @@ const Register = () => {
 
 
     return (
-         <div className="hero min-h-screen bg-base-200">
+         <div className=" items-center flex flex-col min-h-screen ">
+           <h2 className='text-center text-3xl font-bold my-2'>Register Here</h2>
           <Helmet><title>EliteDwelling | Register</title></Helmet>
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Login now!</h1>
-            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-          </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card  w-full md:w-2/5 lg:w-2/5 max-w-sm shadow-2xl bg-base-100">
+         
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -139,12 +136,11 @@ const Register = () => {
                 
               </div>
               <div className="form-control mt-6">
-            <button  className="btn btn-primary">  Register </button>
+            <button  className="btn bg-green-600 text-white">  Register </button>
               </div>
             </form>
-            <p className="text-center mb-2">Already have account? <Link to={'/login'}><span className="text-green-600 font-bold">Login here</span></Link> </p>
+            <p className="text-center mb-6">Already have account? <Link to={'/login'}><span className="text-green-600 font-bold">Login here</span></Link> </p>
           </div>
-        </div>
          </div>
     );
 };

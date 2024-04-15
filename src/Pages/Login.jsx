@@ -56,14 +56,11 @@ const Login = () => {
 
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero my-4 ">
           <Helmet><title>EliteDwelling | Login</title></Helmet>
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Login now!</h1>
-            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-          </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+
+          <div className="card w-full md:w-2/5 lg:w-2/5 shadow-2xl bg-base-100">
+          <h2 className='text-center text-2xl font-bold my-2'>Login Now</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
        
               <div className="form-control">
@@ -98,12 +95,13 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn bg-green-600 text-white">Login</button>
               </div>
             </form>
             {/* Social Login  */}
             <div className='text-center font-bold'>
-                  <p>You can also Login with </p>
+           
+            <p className="px-3 text-sm my-3 dark:text-gray-600">Login with social accounts</p>
               <button onClick={()=>handleSocialSignIn(googleSignIn)} className='text-green-600 text-2xl'><FcGoogle  />
                     </button>
               <button onClick={()=> handleSocialSignIn(githubSignIn)} className=' ml-4 text-2xl'><FaGithub />
@@ -112,9 +110,8 @@ const Login = () => {
 
             </div>
             {/* {error && <span className="text-red-500">{error}</span>} */}
-            <p className="text-center mb-2">New on the Platform ? <Link to={'/register'}><span className="text-green-600 font-bold">Register here</span></Link> </p>
+            <p className="text-center mb-6">New on the Platform ? <Link to={'/register'}><span className="text-green-600 font-bold">Register here</span></Link> </p>
           </div>
-        </div>
          </div>
     );
 };

@@ -3,6 +3,7 @@ import { AuthContext } from '../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from 'react-helmet-async';
 
 const Update = () => {
     const {user} = useContext(AuthContext) || {}
@@ -40,6 +41,7 @@ const Update = () => {
 
     return (
         <div className='flex flex-col justify-center items-center my-3'>
+          <Helmet><title>EliteDwelling | Update Profile</title></Helmet>
             <h1 className='text-2xl mt-2 font-bold'>Update Your Profile</h1>
             <img className='w-28 h-28 rounded-full my-3' src={image} alt="" />
             <div className="card  shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

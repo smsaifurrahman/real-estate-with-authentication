@@ -23,7 +23,7 @@ const Slider = () => {
                         Elevating lifestyles, one exquisite property at a time.
                     </p>
                   <div className='flex items-center justify-center mt-6'>
-                     <button className='btn btn-primary font-bold '>Explore Properties</button>
+                     <button className='btn bg-blue-500 text-white font-bold '>Explore Properties</button>
                   </div>
              </div>
              <div className='col-span-1 h-52 md:h-96 lg:h-96'>

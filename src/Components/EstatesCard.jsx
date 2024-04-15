@@ -8,7 +8,7 @@ const EstatesCard = ({estate}) => {
  <div  className="card bg-base-200 shadow-xl md:hover:scale-105 transition-transform">
     <figure className=" h-64 md:h-80 relative"> {/* Adjust the height as per your requirement */}
         <img className='rounded-xl h-full w-full object-cover' src={image} alt="Shoes" />
-        <p className="absolute bg-orange-500 px-6 rounded-l-b-xl text-white f left-0 top-0 py-2">{Status}</p>
+        <p className="absolute bg-blue-500 px-6 rounded-l-b-xl text-white f left-0 top-0 py-2">{Status}</p>
     </figure>
     <div className="card-body">
         <div className="flex items-center gap-2">
@@ -23,7 +23,7 @@ const EstatesCard = ({estate}) => {
         <p> <span className="font-bold">Price:</span> {price}</p>
         <p>Description: {description.slice(0,120)}... </p>
         <div>
-           <Link to={`/estate-details/${id}`}> <button onClick={''} className="btn btn-primary">View Property</button></Link>
+           <Link to={`/estate-details/${id}`}> <button onClick={''} className="btn bg-orange-500 text-white">View Property</button></Link>
         </div>
        
     </div>
