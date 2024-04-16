@@ -112,6 +112,8 @@ const Login = () => {
             {/* {error && <span className="text-red-500">{error}</span>} */}
             <p className="text-center mb-6">New on the Platform ? <Link to={'/register'}><span className="text-green-600 font-bold">Register here</span></Link> </p>
           </div>
+
+          
          </div>
     );
 };

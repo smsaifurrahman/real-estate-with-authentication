@@ -2,6 +2,7 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay  } from 'swiper/modul
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import AOS from 'aos';
+import 'animate.css';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 // Import Swiper styles
@@ -14,7 +15,7 @@ const Slider = () => {
 
     return (
         <div   className='grid grid-cols-1 gap-2  lg:grid-cols-2 my-4 md:my-10 '>
-             <div  data-aos="zoom-in" data-aos-delay="500"  data-aos-easing="ease-in-out" className='col-span-1 '>
+             <div  className='col-span-1 animate__animated animate__rotateIn '>
                     <h1 className='md:mt-16 md:text-4xl font-bold text-orange-600 text-2xl text-center'>The better way to buy <br />Real Estate</h1>
                     <p className='text-center my-4 text-sm md:text-xl'>
                         
@@ -36,7 +37,7 @@ const Slider = () => {
             pagination={{ clickable: false }}
             scrollbar={{ draggable: true }}
             // onSwiper={(swiper) => console.log(swiper)}
-            autoplay={{ delay: 4000 }}
+            autoplay={{ delay: 3000 }}
             // onSlideChange={() => console.log('slide change')}
             >
                 <SwiperSlide><img className='h-full w-full rounded-xl object-cover' src='https://i.ibb.co/JrzqhYx/1000-F-754826732-ETiyz-JOwh-EFe-Xx-M8j-H2s-Zs5a-S5-MLzr2k.jpg' alt="" /></SwiperSlide>

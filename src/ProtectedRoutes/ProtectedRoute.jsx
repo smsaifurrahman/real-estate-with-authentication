@@ -8,7 +8,7 @@ const ProtectedRoute = ({children}) => {
     const location = useLocation()
     // console.log(location);
     if(loading) {
-        return <span className="loading loading-dots loading-lg"></span>
+        return <div className="flex flex-col justify-center items-center"><span className="loading loading-dots loading-lg h-dvh"></span></div>
 
     }
     if(user) {

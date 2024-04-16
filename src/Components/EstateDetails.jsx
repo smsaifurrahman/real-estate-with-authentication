@@ -71,7 +71,7 @@ const EstateDetails = () => {
         
                 <p>{description}</p>
               <Link to={'/'}> <button className="btn bg-orange-500 text-white  my-1">Back to Properties</button></Link>
-              <button className="btn bg-blue-500 text-white ml-4">{Status === 'Sale'? 'Sale Property' : 'Rent Property'}</button>
+              <button className="btn bg-blue-500 text-white ml-4">{Status === 'Sale'? 'Buy Property' : 'Rent Property'}</button>
         </div> 
           
         </div>

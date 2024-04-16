@@ -20,6 +20,7 @@ const Navbar = () => {
         <NavLink to={'/'} className={({isActive}) => isActive ? ' font-bold text-xl text-orange-600 p-2 rounded-xl border-2 border-orange-300' : 'font-bold p-2 text-xl rounded-xl border-2 border-orange-300'}> Home </NavLink>
         <NavLink to={'/update'} className= {({isActive}) => isActive ? ' font-bold text-orange-600 border-2 border-orange-300 text-xl p-2 rounded-xl md:mx-2' : 'font-bold p-2 text-xl rounded-xl border-2 border-orange-300  md:mx-2'} > Update Profile </NavLink>
         <NavLink to={'/contact-us'} className={({isActive}) => isActive ? ' font-bold text-orange-600 text-xl border-2 border-orange-300  p-2 rounded-xl' : 'font-bold p-2 text-xl rounded-xl border-2 border-orange-300'}> Contact Us </NavLink>
+        {/* <NavLink to={'/contact'} className={({isActive}) => isActive ? ' font-bold text-orange-600 text-xl border-2 border-orange-300  p-2 rounded-xl' : 'font-bold p-2 text-xl rounded-xl border-2 border-orange-300'}> Contact  </NavLink> */}
 
 
         
