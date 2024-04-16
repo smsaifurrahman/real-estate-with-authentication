@@ -66,7 +66,7 @@ const Navbar = () => {
         
         
       </div>
-      <button onClick={handleLogOut}  className="btn">Logout</button>
+      <button onClick={handleLogOut}  className="btn border-2 border-orange-300 font-bold">Logout</button>
         </div>
         :  <NavLink to={'/login'} className={({isActive}) => isActive ? 'font-bold text-xl text-orange-600 p-2 rounded-xl border-2 border-orange-300' : 'font-bold p-2 text-xl rounded-xl border-2 border-orange-300 ' }><button >Login</button></NavLink>
         

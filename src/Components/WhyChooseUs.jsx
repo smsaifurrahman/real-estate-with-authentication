@@ -12,7 +12,7 @@ const WhyChooseUs = () => {
 			<h3 className="text-2xl font-bold leading-none sm:text-5xl">Meet our team</h3>
 			<p className=" text-xl dark:text-gray-600">Talk to one of our agents</p>
 		</div>
-		<div className="grid w-full grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+		<div className="grid w-full grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
 			<div className="space-y-2">
 				<img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500" src={agent1} />
 				<div className="flex flex-col items-center">

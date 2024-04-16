@@ -77,10 +77,10 @@ const Register = () => {
 
 
     return (
-         <div className=" items-center flex flex-col min-h-screen ">
+         <div className=" items-center flex flex-col min-h-screen my-4 ">
            <h2 className='text-center text-3xl font-bold my-2'>Register Here</h2>
           <Helmet><title>EliteDwelling | Register</title></Helmet>
-          <div className="card  w-full md:w-2/5 lg:w-2/5 max-w-sm shadow-2xl bg-base-100">
+          <div className="card  w-full md:w-2/5 lg:w-2/5  shadow-2xl bg-base-100">
          
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">

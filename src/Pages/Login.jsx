@@ -101,10 +101,10 @@ const Login = () => {
             {/* Social Login  */}
             <div className='text-center font-bold'>
            
-            <p className="px-3 text-sm my-3 dark:text-gray-600">Login with social accounts</p>
-              <button onClick={()=>handleSocialSignIn(googleSignIn)} className='text-green-600 text-2xl'><FcGoogle  />
+            <p className="px-3 text-xl my-3 dark:text-gray-600">-------------- Login with social accounts ------------</p>
+              <button onClick={()=>handleSocialSignIn(googleSignIn)} className='text-green-600 text-3xl'><FcGoogle  />
                     </button>
-              <button onClick={()=> handleSocialSignIn(githubSignIn)} className=' ml-4 text-2xl'><FaGithub />
+              <button onClick={()=> handleSocialSignIn(githubSignIn)} className=' ml-4 text-3xl'><FaGithub />
               </button>    
                     
 
