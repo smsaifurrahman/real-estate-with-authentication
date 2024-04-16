@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
 	<div className="container p-4 mx-auto space-y-16 sm:p-10">
 		<div className="space-y-4 text-center">
 			<h3 className="text-2xl font-bold leading-none sm:text-5xl">Meet our team</h3>
-			<p className=" text-xl dark:text-gray-600">Talk to one of our agents</p>
+			<p className=" text-xl  text-orange-500 font-bold">Talk to one of our agents</p>
 		</div>
 		<div className="grid w-full grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
 			<div className="space-y-2">
