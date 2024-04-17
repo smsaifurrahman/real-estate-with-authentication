@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
 		</div>
 		<div className="grid w-full grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
 			<div className="space-y-2">
-				<img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500" src={agent1} />
+				<img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500" src='https://i.ibb.co/RpTFkqN/agent1.jpg' />
 				<div className="flex flex-col items-center">
 					<h4 className="text-xl font-semibold">Leroy Jenkins</h4>
 					<p className="text-sm dark:text-gray-600">13 Properties</p>
@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
 				</div>
 			</div>
 			<div className="space-y-4">
-				<img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500"  src={agent2} />
+				<img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500"  src='https://i.ibb.co/wLQYK67/agent2.jpg' />
 				<div className="flex flex-col items-center">
 					<h4 className="text-xl font-semibold">Leroy Jenkins</h4>
 					<p className="text-sm dark:text-gray-600">8 Properties</p>
@@ -62,7 +62,7 @@ const WhyChooseUs = () => {
 				</div>
 			</div>
 			<div className="space-y-4">
-				<img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500"  src={agent3} />
+				<img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500"  src='https://i.ibb.co/7n5qfKh/agent3.jpg' />
 				<div className="flex flex-col items-center">
 					<h4 className="text-xl font-semibold">Leroy Jenkins</h4>
 					<p className="text-sm dark:text-gray-600">16 Properties</p>
@@ -86,7 +86,7 @@ const WhyChooseUs = () => {
 				</div>
 			</div>
 			<div className="space-y-4">
-				<img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500"  src={agent4} />
+				<img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500"  src='https://i.ibb.co/wBS8VR1/agent4.jpg' />
 				<div className="flex flex-col items-center">
 					<h4 className="text-xl font-semibold">Leroy Jenkins</h4>
 					<p className="text-sm dark:text-gray-600">12 Properties</p>
